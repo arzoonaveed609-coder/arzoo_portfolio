@@ -3,29 +3,562 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Arzoo Naveed | Portfolio</title>
+
 <style>
-  body { font-family: Arial, sans-serif; margin:0; background:#eef2ff; }
-  nav { background:#1e293b; color:white; padding:15px; display:flex; justify-content:flex-end; gap:20px; }
-  nav a { color:white; text-decoration:none; font-size:14px; }
-  .hero { text-align:center; padding:100px 20px; }
-  .hero h1 { font-size:42px; }
-  .hero h1 span { color:#2563eb; }
-  .btn { background:#2563eb; color:white; padding:10px 20px; border:none; border-radius:6px; margin:5px; cursor:pointer; text-decoration:none; }
-  .btn-outline { background:white; color:#2563eb; border:1px solid #2563eb; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #eef2ff;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+
+nav {
+  background: #1e293b;
+  color: white;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #60a5fa;
+}
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #eef2ff, #dbeafe);
+}
+
+.hero h1 {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: #2563eb;
+}
+
+.hero h2 {
+  font-size: 25px;
+  color: #334155;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.btn {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 7px;
+  margin: 20px 5px 0;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: white;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+.btn-outline:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* SECTIONS */
+
+section {
+  padding: 70px 10%;
+  scroll-margin-top: 70px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 35px;
+  color: #1e3a8a;
+}
+
+/* ABOUT */
+
+.about {
+  background: white;
+}
+
+.about-content {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* EDUCATION */
+
+.education {
+  text-align: center;
+}
+
+.education-card {
+  max-width: 650px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.education-card h3 {
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+/* SKILLS */
+
+.skills {
+  background: #f8fafc;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skill {
+  background: white;
+  padding: 14px 22px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  font-weight: bold;
+}
+
+/* PROJECTS */
+
+.projects {
+  background: white;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: #f8fafc;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.project-card h3 {
+  color: #2563eb;
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.project-card p {
+  margin-bottom: 10px;
+}
+
+.project-tech {
+  font-weight: bold;
+  color: #334155;
+}
+
+/* SCREENSHOTS */
+
+.screenshots {
+  background: #eef2ff;
+}
+
+.screenshot-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.screenshot-container img {
+  width: 220px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* CERTIFICATIONS */
+
+.certifications {
+  background: white;
+  text-align: center;
+}
+
+.certification-box {
+  max-width: 700px;
+  margin: auto;
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+/* CONTACT */
+
+.contact {
+  text-align: center;
+  background: #dbeafe;
+}
+
+.contact p {
+  font-size: 18px;
+  margin: 10px;
+}
+
+.contact a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero h2 {
+    font-size: 21px;
+  }
+
+  section {
+    padding: 55px 6%;
+  }
+
+}
+
 </style>
 </head>
+
+
 <body>
-  <nav>
-    <a href="#">About</a><a href="#">Skills</a><a href="#">Projects</a><a href="#">Education</a><a href="#">Contact</a>
-  </nav>
-  <div class="hero">
-    <h1>Hi, I'm <span>Arzoo Naveed</span></h1>
-    <p>BS Information Technology Student & Aspiring App Developer</p>
-    <p>Flutter • Dart • Firebase • Web Development</p>
-    <br>
-    <a href="#" class="btn">View My Projects</a>
-    <a href="#" class="btn btn-outline">Contact Me</a>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+  <a href="#about">About</a>
+
+  <a href="#skills">Skills</a>
+
+  <a href="#projects">Projects</a>
+
+  <a href="#education">Education</a>
+
+  <a href="#certifications">Certifications</a>
+
+  <a href="#contact">Contact</a>
+
+</nav>
+
+
+<!-- HERO SECTION -->
+
+<div class="hero">
+
+  <h1>
+    Hi, I'm <span>Arzoo Naveed</span>
+  </h1>
+
+  <h2>
+    BS Information Technology Student | Flutter Developer
+  </h2>
+
+  <p>
+    Flutter • Dart • Firebase • Cloud Firestore
+  </p>
+
+  <a href="#projects" class="btn">
+    View My Projects
+  </a>
+
+  <a href="#contact" class="btn btn-outline">
+    Contact Me
+  </a>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+  <h2>About Me</h2>
+
+  <div class="about-content">
+
+    <p>
+      I am a BS Information Technology student interested in
+      mobile application development and software development.
+      I enjoy building applications using Flutter, Dart and Firebase.
+    </p>
+
   </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education" class="education">
+
+  <h2>Education</h2>
+
+  <div class="education-card">
+
+    <h3>BS Information Technology</h3>
+
+    <p>
+      2023 - 2027
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills" class="skills">
+
+  <h2>My Skills</h2>
+
+  <div class="skills-container">
+
+    <div class="skill">Flutter</div>
+
+    <div class="skill">Dart</div>
+
+    <div class="skill">Firebase</div>
+
+    <div class="skill">Cloud Firestore</div>
+
+    <div class="skill">Firebase Authentication</div>
+
+    <div class="skill">Git & GitHub</div>
+
+    <div class="skill">Android Studio</div>
+
+  </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects" class="projects">
+
+  <h2>My Projects</h2>
+
+  <div class="project-container">
+
+
+    <!-- PROJECT 1 -->
+
+    <div class="project-card">
+
+      <h3>Smart Study Planner</h3>
+
+      <p>
+        A Flutter-based mobile application designed to help
+        students manage study goals, focus sessions and progress.
+      </p>
+
+      <p class="project-tech">
+        Technologies:
+      </p>
+
+      <p>
+        Flutter, Dart, Firebase, Provider
+      </p>
+
+      <p>
+        <strong>Timeline:</strong> 2026
+      </p>
+
+    </div>
+
+
+    <!-- PROJECT 2 -->
+
+    <div class="project-card">
+
+      <h3>School Parent App</h3>
+
+      <p>
+        A Flutter and Firebase-based application designed to
+        provide school-related services for parents.
+      </p>
+
+      <p class="project-tech">
+        Technologies:
+      </p>
+
+      <p>
+        Flutter, Dart, Firebase, Cloud Firestore
+      </p>
+
+      <p>
+        <strong>Timeline:</strong> 2026
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- PROJECT SCREENSHOTS -->
+
+<section id="screenshots" class="screenshots">
+
+  <h2>Project Screenshots</h2>
+
+  <div class="screenshot-container">
+
+    <img src="screenshots/study-login.png"
+         alt="Study Planner Login">
+
+    <img src="screenshots/study-home.png"
+         alt="Study Planner Home">
+
+    <img src="screenshots/study-timer.png"
+         alt="Study Planner Focus Timer">
+
+    <img src="screenshots/study-progress.png"
+         alt="Study Planner Progress">
+
+  </div>
+
+</section>
+
+
+<!-- CERTIFICATIONS -->
+
+<section id="certifications" class="certifications">
+
+  <h2>Certifications</h2>
+
+  <div class="certification-box">
+
+    <p>
+      Currently building my technical skills through
+      academic projects and practical development.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+  <h2>Contact Me</h2>
+
+  <p>
+    📧 Email:
+    <a href="mailto:arzoonaveed101@gmail.com">
+      arzoonaveed101@gmail.com
+    </a>
+  </p>
+
+  <p>
+    🔗 LinkedIn:
+    <a href="https://www.linkedin.com/in/arzoo-naveed-b7a31a437"
+       target="_blank">
+      View LinkedIn Profile
+    </a>
+  </p>
+
+  <p>
+    💻 GitHub:
+    <a href="https://github.com/arzoonaveed609-coder"
+       target="_blank">
+      View GitHub Profile
+    </a>
+  </p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+    © 2026 Arzoo Naveed | Portfolio
+  </p>
+
+</footer>
+
+
 </body>
 </html>
