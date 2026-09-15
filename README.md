@@ -3,7 +3,7 @@
 ### BS Information Technology Student | Flutter Developer
 
 
-## 👩‍💻 About Me
+##  About Me
 
 I am a BS Information Technology student interested in
 mobile application development and software development.
@@ -12,13 +12,11 @@ I enjoy building applications using Flutter, Dart and Firebase.
 
 ## 🎓 Education
 
-*BS Information Technology*
-
-Your University  
+*BS Information Technology* 
 2023-2027
 
 
-## 🛠️ Skills
+##  Skills
 
 - Flutter
 - Dart
@@ -29,7 +27,7 @@ Your University
 - Android Studio
 
 
-## 📱 Projects
+##  Projects
 
 ### Smart Study Planner
 
@@ -51,7 +49,7 @@ provide school-related services for parents.
 *Timeline:* 2026
 
 
-## 📜 Certifications
+##  Certifications
 
  Currently building my technical skills through academic projects and practical development.
 
